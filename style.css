@@ -78,20 +78,43 @@ section {
   .features {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
   margin-top: 30px;
+  padding: 0 20px;
 }
 
 .feature-item {
-  max-width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 260px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
 }
 
 .feature-item i {
   font-size: 40px;
-  color: #0046be;
+  color: var(--blue-main);
   margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  color: var(--dark-gray);
 }
 
 .testimoni {
