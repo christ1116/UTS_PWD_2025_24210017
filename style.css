@@ -22,7 +22,7 @@ header {
     color: lightgray;
     padding: 60px 20px;
     text-align: center;
-    background: url'logo.png' no-repeat top center;
+    background: url('logo.png') no-repeat top center;
     animation:bounce 2s;
 }
 
