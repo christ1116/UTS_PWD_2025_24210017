@@ -68,18 +68,6 @@ section {
     text-align: center;
   }
 
-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-
-section p{
-    font-size: 1.1rem;
-    margin: 0 auto 30px;
-    max-width: 800px;
-    text-align: center;
-  }
-
   .features {
   display: flex;
   justify-content: center;
