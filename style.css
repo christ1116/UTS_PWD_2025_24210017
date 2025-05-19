@@ -1,63 +1,81 @@
-/* Global Styles */
+:root {
+    --text: #2d2d2d;
+    --blue-main: #0046be;
+    --light-gray: #f6f8fb;
+    --dark-gray: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2d2d2d;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: var(--text);
 }
 
-/* Header */
 header {
-  background-color: #f6f8fb;
-  padding: 60px 20px;
-  text-align: center;
+    background: linear-gradient(to bottom, #f6f8fb, #ffffff);
+    color: lightgray;
+    padding: 60px 20px;
+    text-align: center;
+    background: url'logo.png' no-repeat top center;
+    animation:bounce 2s;
 }
 
-/* Logo di dalam header */
 header img {
   width: 260px;
   height: 120px;
   animation: bounce 2s;
 }
 
-/* Keyframe untuk animasi bounce */
 @keyframes bounce {
-  0%, 20%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
 }
 
-/* Tombol Utama */
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .btn-primary {
-  background-color: #0046be;
-  color: #ffffff;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: var(--blue-main);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.btn-primary:hover {
-  background-color: #00a6ff;
+.btn-primary:hover{
+    background:  #00a6ff;
 }
 
-/* Section Styling */
 section {
-  padding: 40px 20px;
-  text-align: center;
-}
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
 
-/* Fitur (Resume, Cari Pekerjaan, Kelola) */
-.features {
+  .features {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -76,7 +94,6 @@ section {
   margin-bottom: 15px;
 }
 
-/* Testimoni */
 .testimoni {
   background-color: #f6f8fb;
   padding: 40px 20px;
@@ -112,16 +129,16 @@ section {
   color: #0046be;
 }
 
-/* Call to Action */
 .cta {
   padding: 40px 20px;
   text-align: center;
 }
 
-footer {
-  background-color: #0046be;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
+  footer {
+    background-color: var(--blue-main);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+
