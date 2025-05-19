@@ -45,7 +45,7 @@ header p {
     margin: 0 auto;
 }
 
-.btn {
+.btn-primary {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 30px;
@@ -58,7 +58,7 @@ header p {
     transition: 0.3s;
 }
 
-.btn:hover{
+.btn-primary:hover{
     background:  #00a6ff;
 }
 
@@ -80,57 +80,64 @@ section p{
     text-align: center;
   }
 
-  .activities {
-    border-top:1px dashed gray;
+  .features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
 }
 
-.activity-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+.feature-item {
+  max-width: 300px;
+  text-align: center;
 }
 
-.activity {
-  background: white;
-  padding: 30px 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.activity:hover {
-  transform: translateY(-5px);
-}
-
-.activity i {
-  font-size: 2.5rem;
-  color: var(--accent);
+.feature-item i {
+  font-size: 40px;
+  color: #0046be;
   margin-bottom: 15px;
 }
 
-.activity h3 {
-  font-size: 1.3rem;
+.testimoni {
+  background-color: #f6f8fb;
+  padding: 40px 20px;
+}
+
+.testimoni h2 {
+  margin-bottom: 30px;
+}
+
+.testimoni-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimoni-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.testimoni-box p {
+  color: #6c757d;
   margin-bottom: 10px;
-  color: var(--blue-main);
+}
+
+.testimoni-box strong {
+  color: #0046be;
 }
 
 .cta {
-    background-color: var(--light-gray);
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  .cta h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-
-  .cta p {
-    max-width: 600px;
-    margin: 0 auto 20px;
-    font-size: 1rem;
-  }
+  padding: 40px 20px;
+  text-align: center;
+}
 
   footer {
     background-color: var(--blue-main);
