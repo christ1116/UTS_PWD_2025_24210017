@@ -68,6 +68,83 @@ header p {
 .btn-primary:hover{
   background:  #00a6ff;
 }
+.steps {
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 90px;
+}
+
+.step i {
+  font-size: 2.5rem;
+  color: var(--biruutama);
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  color: var(--tulisanutama);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: rgb(109, 109, 109);
+  margin-bottom: 30px;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews {
+  border-top: 1px solid grey;
+  padding: 60px 20px;
+}
+
+.reviews h2 {
+  color: var(--tulisanutama);
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2rem;
+}
+
+.review-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  margin: 30px 20px;
+  text-align: center;
+  justify-content: center;
+  }
+
+.review {
+  background-color: var(--lightgray);
+  padding: 30px 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  max-width: 300px; 
+  margin: 0 auto;
+  display: grid;
+}
+
+.review p {
+  text-align: center;
+  color: var(--tulisanutama);
+  font-size: 1rem;
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+
+.review h4 {
+  text-align: center;
+  color: var(--biruutama);
+}
 
 section {
   background-color: white;
