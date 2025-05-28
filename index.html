@@ -10,7 +10,7 @@
 <body>
   <header>
     <img src="logo.png">
-    <h1>Temukan Karier Impianmu</h1>
+    <h1 id="header_h1">Temukan Karier Impianmu</h1>
     <p>Buat resume profesional, cari pekerjaan, dan kelola aplikasi Anda – semuanya dalam satu platform.</p>
     <button class="btn-primary">Mulai Sekarang</button>
   </header>
@@ -54,7 +54,7 @@
   <section class="cta">
     <h2>Wujudkan Masa Depan Profesional Anda</h2>
     <p>Bergabunglah dengan komunitas global pencari kerja dan buka peluang karier yang lebih luas hari ini.</p>
-    <button class="btn-primary">Gabung Gratis</button>
+    <button type="button" class="btn-primary" onclick="bikinButton()">Gabung Gratis</button>
   </section>
 
   <footer>
@@ -62,3 +62,36 @@
   </footer>
 </body>
 </html>
+
+<script>
+  document.querySelector('.btn-primary').addEventListener('click',function() {
+      alert ("Selamat DATANG D JOOBSEEKR! SILAHKAN DAFTAR UNTUK MULAI.");
+  });
+
+  const nama = prompt("Masukkan Nama Anda:");
+  document.getElementById("header_h1").innerHTML = nama;
+
+  const btn = document.querySelector('.btn-primary');
+  btn.addEventListener('mouseover', () => {
+    btn.innerText = 'Ayo Gabung!';
+  });
+  btn.addEventListener('mouseout', () => {
+    btn.innerText = 'Gabung Gratis';
+  });
+
+  function bikinButton()
+  {
+    const divBaru = document.createElement('div');
+    divBaru.innerHTML = "<button class='btn-primary'>Klik di sini!</button>";
+    document.querySelector('.cta').append(divBaru);
+  }
+
+  const estDiv = document.createElement("div");
+  estDiv.innerHTML = '<button class="btn-primary" id="cekPeluang">Cek</button><p id="hasilPeluang"></p>';
+  document.querySelector(".cta").appendChild(estDiv);
+  document.getElementById("cekPeluang").onclick = () => {
+    const nilai = Math.floor(Math.random() * 51) + 50;
+    document.getElementById("hasilPeluang").innerText = `Peluang Anda: ${nilai}%`;
+  };
+</script>
+
