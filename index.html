@@ -64,34 +64,107 @@
 </html>
 
 <script>
-  document.querySelector('.btn-primary').addEventListener('click',function() {
-      alert ("Selamat DATANG D JOOBSEEKR! SILAHKAN DAFTAR UNTUK MULAI.");
-  });
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobSeekr - Temukan Karier Impianmu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png">
+    <h1 id="header_h1">Temukan Karier Impianmu</h1>
+    <p>Buat resume profesional, cari pekerjaan, dan kelola aplikasi Anda – semuanya dalam satu platform.</p>
+    <button class="btn-primary">Mulai Sekarang</button>
+  </header>
 
-  const nama = prompt("Masukkan Nama Anda:");
-  document.getElementById("header_h1").innerHTML = nama;
+  <section class="steps">
+    <div class="step">
+      <i class="fas fa-file-alt"></i>
+      <h3>Buat Resume</h3>
+      <p>Gunakan pembuat resume kami yang modern untuk membuat dokumen profesional dalam hitungan menit.</p>
+    </div>
+    <div class="step">
+      <i class="fas fa-search"></i>
+      <h3>Cari Pekerjaan</h3>
+      <p>Telusuri ribuan lowongan kerja yang relevan dengan keahlian dan lokasi Anda.</p>
+    </div>
+    <div class="step">
+      <i class="fas fa-briefcase"></i>
+      <h3>Lamar dan Kelola</h3>
+      <p>Lacak lamaran Anda dan simpan pekerjaan favorit dengan mudah dalam dashboard pribadi Anda.</p>
+    </div>
+  </section>
 
-  const btn = document.querySelector('.btn-primary');
-  btn.addEventListener('mouseover', () => {
-    btn.innerText = 'Ayo Gabung!';
-  });
-  btn.addEventListener('mouseout', () => {
-    btn.innerText = 'Gabung Gratis';
-  });
+  <section class="reviews">
+    <h2>Testimoni Pengguna</h2>
+    <div class="review-list">
+      <div class="review">
+        <p>"JobSeekr membantu saya membuat resume yang profesional dan mudah diterima oleh perusahaan!"</p>
+        <h4>— Rina, Fresh Graduate</h4>
+      </div>
+      <div class="review">
+        <p>"Saya suka fitur pelacakan lamaran. Semua lowongan yang saya lamar bisa saya pantau dengan mudah."</p>
+        <h4>— Andre, Digital Marketer</h4>
+      </div>
+      <div class="review">
+        <p>"Prosesnya cepat dan antarmukanya mudah digunakan. Sangat cocok untuk profesional yang sibuk."</p>
+        <h4>— Sari, HR Specialist</h4>
+      </div>
+    </div>
+  </section>
 
-  function bikinButton()
-  {
-    const divBaru = document.createElement('div');
-    divBaru.innerHTML = "<button class='btn-primary'>Klik di sini!</button>";
-    document.querySelector('.cta').append(divBaru);
-  }
+  <section class="cta">
+    <h2>Wujudkan Masa Depan Profesional Anda</h2>
+    <p>Bergabunglah dengan komunitas global pencari kerja dan buka peluang karier yang lebih luas hari ini.</p>
+    <button type="button" class="btn-primary" onclick="bikinButton()">Gabung Gratis</button>
+  </section>
 
-  const estDiv = document.createElement("div");
-  estDiv.innerHTML = '<button class="btn-primary" id="cekPeluang">Cek</button><p id="hasilPeluang"></p>';
-  document.querySelector(".cta").appendChild(estDiv);
-  document.getElementById("cekPeluang").onclick = () => {
-    const nilai = Math.floor(Math.random() * 51) + 50;
-    document.getElementById("hasilPeluang").innerText = `Peluang Anda: ${nilai}%`;
-  };
+  <footer>
+    <p>&copy; 2025 JobSeekr</p>
+  </footer>
+</body>
+</html>
+
+<script>
+document.querySelector(".btn-primary").addEventListener("click", function () {
+  alert("Selamat DATANG D JOOBSEEKR! SILAHKAN DAFTAR UNTUK MULAI.");
+});
+
+const nama = prompt("Masukkan Nama Anda:");
+document.getElementById("header_h1").innerHTML = nama;
+
+const btn = document.querySelector(".btn-primary");
+btn.addEventListener("mouseover", () => {
+  btn.innerText = "Ayo Gabung!";
+});
+btn.addEventListener("mouseout", () => {
+  btn.innerText = "Gabung Gratis";
+});
+
+function bikinButton() {
+  const divBaru = document.createElement("div");
+  divBaru.innerHTML = "<button class='btn-primary'>Klik di sini!</button>";
+  document.querySelector(".cta").append(divBaru);
+}
+
+// Tugas
+const peluangDiv = document.createElement("div");
+peluangDiv.innerHTML = `
+  <h3>Estimasi Peluang Kerja</h3>
+  <input type="text" id="pekerjaan" placeholder="Nama Pekerjaan"/>
+  <input type="number" id="tahun" placeholder="Tahun"/>
+  <button class="btn-primary" id="cekPeluangBtn">Cek</button>
+  <p id="hasilPeluang"></p>
+`;
+document.querySelector(".cta").appendChild(peluangDiv);
+
+document.getElementById("cekPeluangBtn").onclick = () => {
+  const nilai = Math.floor(Math.random() * 51) + 50;
+  document.getElementById("hasilPeluang").innerText = `Peluang Anda: ${nilai}%`;
+};
 </script>
 
